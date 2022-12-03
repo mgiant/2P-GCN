@@ -1,0 +1,62 @@
+# Setting
+gpus: [0]
+seed: 1
+debug: False
+pretrained_path:
+work_dir: ./workdir
+no_progress_bar: False
+
+
+# Data Loader
+# ntu, ntu120, ntu_mutual, ntu120_mutual, sbu
+dataset: ntu_mutual
+dataset_args:
+  split: xsub
+  graph: mutual
+  labeling: geometric
+  processing: default
+  train_batch_size: 16
+  eval_batch_size: 16
+  num_frame: 288
+  inputs: JVBM
+  transform: False
+  crop: True
+  root_folder: ./data/ntu_mutual
+  ntu60_path: # data/ntu_mutual/ntu60 or data/nturgbd_skeletons_s001_to_s017/
+  ntu120_path: # data/ntu_mutual/ntu120 or data/nturgbd_skeletons_s018_to_s032/
+
+# Model
+model_type: 2PGCN
+model_args:
+  att_type: stpa
+  kernel_size: [3,2]
+  block_structure: m19
+  reduct_ratio: 2
+  bias: True
+
+
+# Optimizer
+# SGD, Adam
+optimizer: SGD
+optimizer_args:
+  SGD:
+    lr: 0.1
+    momentum: 0.9
+    nesterov: True
+    weight_decay: 0.0002
+  Adam:
+    lr: 0.1
+    betas: [0.9,0.99]
+    weight_decay: 0.0002
+
+# Scheduler
+# step, cosine
+lr_scheduler: cosine
+scheduler_args:
+  step:
+    max_epoch: 70
+    warm_up: 10
+    step_lr: [20,50]
+  cosine:
+    max_epoch: 65
+    warm_up: 5
