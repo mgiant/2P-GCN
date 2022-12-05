@@ -54,5 +54,5 @@ scheduler_args:
     warm_up: 10
     step_lr: [20,50]
   cosine:
-    max_epoch: 65s
+    max_epoch: 50
     warm_up: 5
