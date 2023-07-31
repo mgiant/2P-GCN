@@ -93,10 +93,29 @@ Before evaluating, you should ensure that the trained model corresponding the co
 python main.py -c <path-to-config> -e
 ```
 
-## 5 Results
+## 5 Results and Pretrained Models
 
-To be updated:
-- [ ] Pretrained models.
-- [ ] Averaged Accuracy for the provided models on five-fold cross validation on **SBU Interactions** dataset.
-- [ ] Top-1 Accuracy for the provided models on **NTU_Interaction 60 & 120** datasets.
+We provide folowing pretrained models and their results
 
+| Dataset            | Split  | Acc.   | Pretrained Path             |
+| ------------------ | ------ | ------ | --------------------------- |
+| NTU-Interaction    | X-Sub  | 97.06% | ntu_mutual-symmetry/xsub    |
+| NTU-Interaction    | X-View | 98.99% | ntu_mutual-symmetry/xview   |
+| NTU120-Interaction | X-Sub  | 93.68% | ntu_mutual-symmetry/xsub120 |
+| NTU120-Interaction | X-Set  | 94.37% | ntu_mutual-symmetry/xset120 |
+
+These models can be downloaded from [here](https://drive.google.com/drive/folders/1GnBfM0MXfsxNsG0dQyzamtYZNhnDm5UC?usp=sharing)
+
+## 6 Citation
+```
+@ARTICLE{li20232PGCN,
+  author={Li, Zhengcen and Li, Yueran and Tang, Linlin and Zhang, Tong and Su, Jingyong},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Two-Person Graph Convolutional Network for Skeleton-Based Human Interaction Recognition}, 
+  year={2023},
+  volume={33},
+  number={7},
+  pages={3333-3342},
+  doi={10.1109/TCSVT.2022.3232373}
+}
+```
