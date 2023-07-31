@@ -2,7 +2,7 @@
 
 ## 1 Paper Details
 
-Zhengcen Li, Yueran Li, Linlin Tang, Tong Zhang and Jingyong Su. **Two-person Graph Convolutional Network for Skeleton-based Human Interaction Recognition [link](https://ieeexplore.ieee.org/document/10001762)
+Zhengcen Li, Yueran Li, Linlin Tang, Tong Zhang and Jingyong Su. **Two-person Graph Convolutional Network for Skeleton-based Human Interaction Recognition** [link](https://ieeexplore.ieee.org/document/10001762)
 
 The following pictures are the pipeline of 2P-GCN and the illustration of Basic block.
 
